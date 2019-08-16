@@ -1,33 +1,57 @@
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MyListTest {
 
+    private MyList<String> myList;
+
+    @Before
+    public void init(){
+        myList = new MyList<>();
+        myList.add("element0");
+        myList.add("element1");
+        myList.add("element2");
+        myList.add("element3");
+    }
+
     @Test
     public void testMyListCreated() {
-        MyList<String> myList = new MyList<>();
         assertThat(myList).isNotNull();
     }
 
     @Test
     public void testMyListAdd() {
-        MyList<String> myList = new MyList<>();
-        myList.add("element0");
-        myList.add("element1");
-        myList.add("element2");
-        myList.add("element3");
         assertThat(myList.size()).isEqualTo(4);
     }
 
     @Test
     public void testMyListAddLast() {
-        MyList<String> myList = new MyList<>();
-        myList.add("element0");
-        myList.add("element1");
-        myList.add("element2");
-        myList.add("element3");
         myList.add(4,"element4");
         assertThat(myList.get(4)).isEqualTo("element4");
+    }
+
+    @Test
+    public void testMyListAddAll() {
+        List<String> addList = new ArrayList<>();
+        addList.add("element4");
+        addList.add("element5");
+        myList.addAll(addList);
+        assertThat(myList.get(5)).isEqualTo("element5");
+        assertThat(myList.size()).isEqualTo(6);
+    }
+
+    @Test
+    public void testMyListAddAllIndex() {
+        List<String> addList = new ArrayList<>();
+        addList.add("element4");
+        addList.add("element5");
+        myList.addAll(2,addList);
+        assertThat(myList.get(3)).isEqualTo("element5");
+        assertThat(myList.size()).isEqualTo(6);
     }
 }
