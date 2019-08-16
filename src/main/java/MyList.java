@@ -52,7 +52,7 @@ public class MyList<String> implements List<String> {
         }
         array[size] = element;
         size++;
-        return false;
+        return true;
     }
 
     @Override
@@ -67,16 +67,20 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean addAll(Collection<? extends String> c) {
+        boolean flag = true;
+
         for(String element : c)
-            add(element);
-        return false;
+            flag &= add(element);
+
+        return flag;
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends String> c) {
         for(String element : c)
             add(index++, element);
-        return false;
+
+        return true;
     }
 
     @Override
