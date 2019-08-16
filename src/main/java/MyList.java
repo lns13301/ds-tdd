@@ -92,7 +92,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public String get(int index) {
-        if(index > array.length){
+        if(index >= array.length){
             throw new IndexOutOfBoundsException();
         }
         return array[index];
@@ -108,6 +108,7 @@ public class MyList<String> implements List<String> {
         if(index > array.length){
             throw new IndexOutOfBoundsException();
         }
+
     }
 
     @Override
