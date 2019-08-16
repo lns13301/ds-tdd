@@ -52,7 +52,7 @@ public class MyList<String> implements List<String> {
         }
         array[size] = element;
         size++;
-        return false;
+        return true;
     }
 
     @Override
@@ -67,12 +67,20 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean addAll(Collection<? extends String> c) {
-        return false;
+        boolean flag = true;
+
+        for(String element : c)
+            flag &= add(element);
+
+        return flag;
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends String> c) {
-        return false;
+        for(String element : c)
+            add(index++, element);
+
+        return true;
     }
 
     @Override
@@ -105,10 +113,19 @@ public class MyList<String> implements List<String> {
 
     @Override
     public void add(int index, String element) {
-        if(index > array.length){
+        if(index > array.length || index < 0){
             throw new IndexOutOfBoundsException();
         }
-
+        if(size >= array.length){
+            String[] bigger = (String[]) new Object[array.length * 2];
+            System.arraycopy(array, 0, bigger, 0, array.length);
+            array = bigger;
+        }
+        for(int i = size; i > index; i--){
+            array[i] = array[i - 1];
+        }
+        size++;
+        array[index] = element;
     }
 
     @Override
@@ -118,6 +135,10 @@ public class MyList<String> implements List<String> {
 
     @Override
     public int indexOf(Object o) {
+        for(int i = 0; i < size; i++){
+            if(array[i].equals((String) o))
+                return i;
+        }
         return 0;
     }
 
