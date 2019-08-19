@@ -25,9 +25,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean contains(Object o) {
-        int status = -1;
-        status = indexOf(o);
-        return status != -1;
+        return indexOf(o) != -1;
     }
 
     @Override
