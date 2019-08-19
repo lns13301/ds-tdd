@@ -78,4 +78,17 @@ public class MyListTest {
         assertThat(myList.get(1)).isEqualTo("element2");
         assertThat(myList.size()).isEqualTo(2);
     }
+
+    @Test
+    public void testMyListContains() {
+        assertThat(myList.contains("element1")).isTrue();
+    }
+
+    @Test
+    public void testMyListContainsAll() {
+        List<String> checkList = new ArrayList<>();
+        checkList.add("element0");
+        checkList.add("element2");
+        assertThat(myList.contains(checkList)).isTrue();
+    }
 }

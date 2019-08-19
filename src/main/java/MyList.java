@@ -25,7 +25,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return indexOf(o) != -1;
     }
 
     @Override
@@ -63,7 +63,10 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        boolean flag = true;
+        for(Object element : c)
+            flag &= contains(element);
+        return flag;
     }
 
     @Override
