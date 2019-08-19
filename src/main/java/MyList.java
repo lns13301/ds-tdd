@@ -57,6 +57,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean remove(Object o) {
+        remove(indexOf(o));
         return false;
     }
 
@@ -85,6 +86,9 @@ public class MyList<String> implements List<String> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
+
+        for(Object element : c)
+            remove(element);
         return false;
     }
 
@@ -130,6 +134,10 @@ public class MyList<String> implements List<String> {
 
     @Override
     public String remove(int index) {
+        for(int i = index; i < size - 1; i++){
+            array[i] = array[i+1];
+        }
+        size--;
         return null;
     }
 
