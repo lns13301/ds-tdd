@@ -79,7 +79,7 @@ public class MyList<String> implements List<String> {
     @Override
     public boolean addAll(int index, Collection<? extends String> c) {
         for(String element : c)
-            add(index, element);
+            add(index++, element);
 
         return true;
     }
