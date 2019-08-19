@@ -54,4 +54,28 @@ public class MyListTest {
         assertThat(myList.get(3)).isEqualTo("element5");
         assertThat(myList.size()).isEqualTo(6);
     }
+
+    @Test
+    public void testMyListRemoveIndex() {
+        myList.remove(2);
+        assertThat(myList.get(3)).isEqualTo("element3");
+        assertThat(myList.size()).isEqualTo(3);
+    }
+
+    @Test
+    public void testMyListRemove() {
+        myList.remove("element0");
+        assertThat(myList.get(3)).isEqualTo("element3");
+        assertThat(myList.size()).isEqualTo(3);
+    }
+
+    @Test
+    public void testMyListRemoveAll() {
+        List<String> removeList = new ArrayList<>();
+        removeList.add("element1");
+        removeList.add("element3");
+        myList.removeAll(removeList);
+        assertThat(myList.get(1)).isEqualTo("element2");
+        assertThat(myList.size()).isEqualTo(2);
+    }
 }
