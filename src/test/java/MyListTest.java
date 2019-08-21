@@ -102,4 +102,10 @@ public class MyListTest {
         }
         assertThat(resultList.get(3)).isEqualTo("element3");
     }
+
+    @Test
+    public void testMyListSet() {
+        myList.set(2, "new element");
+        assertThat(myList.get(2)).isEqualTo("new element");
+    }
 }
