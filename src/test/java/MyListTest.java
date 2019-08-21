@@ -95,8 +95,8 @@ public class MyListTest {
 
     @Test
     public void testMyListIterator(){
-        Iterator iterator = myList.iterator();
-        List resultList = new MyList();
+        Iterator<String> iterator = myList.iterator();
+        List<String> resultList = new MyList<>();
         while(iterator.hasNext()){
             resultList.add(iterator.next());
         }
