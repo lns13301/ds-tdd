@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -90,5 +91,13 @@ public class MyListTest {
         checkList.add("element0");
         checkList.add("element2");
         assertThat(myList.contains(checkList)).isTrue();
+    }
+
+    @Test
+    public void testMyListIterator(){
+        Iterator iterator = myList.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }
