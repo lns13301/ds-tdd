@@ -18,7 +18,7 @@
 - [X] contains
     * contains(Object)
     * containsAll(Collection)
-- [ ] iterator
+- [X] iterator
 - [ ] retain
     * retain
     * retainAll

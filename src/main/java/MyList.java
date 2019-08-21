@@ -128,7 +128,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public String set(int index, String element) {
-        return null;
+        return array[index] = element;
     }
 
     @Override
