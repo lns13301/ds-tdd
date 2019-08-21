@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MyListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-21T04:29:57" hostname="DESKTOP-0RH6NSA" time="0.042">
+<testsuite name="MyListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-21T04:54:22" hostname="DESKTOP-0RH6NSA" time="0.08">
   <properties/>
-  <testcase name="testMyListIterator" classname="MyListTest" time="0.042"/>
-  <system-out><![CDATA[element0
-element1
-element2
-element3
-]]></system-out>
+  <testcase name="testMyListIterator" classname="MyListTest" time="0.08"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

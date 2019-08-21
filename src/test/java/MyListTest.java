@@ -96,8 +96,10 @@ public class MyListTest {
     @Test
     public void testMyListIterator(){
         Iterator iterator = myList.iterator();
+        List resultList = new MyList();
         while(iterator.hasNext()){
-            System.out.println(iterator.next());
+            resultList.add(iterator.next());
         }
+        assertThat(resultList.get(3)).isEqualTo("element3");
     }
 }
