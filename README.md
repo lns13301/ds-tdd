@@ -4,7 +4,7 @@
 - [ ] indexOf
     * indexOf
     * LastIndexOf
-- [ ] get / set
+- [X] get / set
 - [X] size
 - [X] isEmpty
 - [X] add
