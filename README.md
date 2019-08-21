@@ -22,4 +22,5 @@
 - [ ] retain
     * retain
     * retainAll
+
 ##LinkedList
