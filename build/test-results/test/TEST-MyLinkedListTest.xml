@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyLinkedListTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-08-26T05:36:33" hostname="DESKTOP-0RH6NSA" time="0.065">
+  <properties/>
+  <testcase name="testMyLinkedListAdd" classname="MyLinkedListTest" time="0.053"/>
+  <testcase name="testMyLinkedListGet" classname="MyLinkedListTest" time="0.003"/>
+  <testcase name="testMyLinkedListAddAll" classname="MyLinkedListTest" time="0.0"/>
+  <testcase name="testMyLinkedListAddIndex" classname="MyLinkedListTest" time="0.001"/>
+  <testcase name="testMyLinkedListAddAllIndex" classname="MyLinkedListTest" time="0.0"/>
+  <testcase name="testMyLinkedListCreated" classname="MyLinkedListTest" time="0.008"/>
+  <system-out><![CDATA[element0
+element1
+element2
+element3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
