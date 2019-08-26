@@ -30,9 +30,21 @@ public class MyList<String> implements List<String> {
 
     @Override
     public Iterator<String> iterator() {
-        return null;
-    }
+        return new Iterator<String>() {
+            private int index = 0;
+            @Override
+            public boolean hasNext() {
+                if(index == size)
+                    return false;
+                return true;
+            }
 
+            @Override
+            public String next() {
+                return get(index++);
+            }
+        };
+    }
     @Override
     public Object[] toArray() {
         return new Object[0];
@@ -116,7 +128,7 @@ public class MyList<String> implements List<String> {
 
     @Override
     public String set(int index, String element) {
-        return null;
+        return array[index] = element;
     }
 
     @Override
