@@ -9,24 +9,22 @@ import java.util.stream.Stream;
 
 public class MyLinkedList<E> implements List<E> {
     private int size;
-    private Node next;
-    private Node tail;
-    private Node head;
+    private Node<E> tail;
+    private Node<E> head;
 
     public MyLinkedList() {
         this.size = 0;
-        this.next = null;
         this.tail = null;
         this. head = null;
     }
     class Node<E> {
         private E data;
-        private Node next;
+        private Node<E> next;
         public Node(E data){
             this.data = data;
             this.next = null;
         }
-        public Node(E data, Node next){
+        public Node(E data, Node<E> next){
             this.data = data;
             this.next = next;
         }
@@ -35,11 +33,11 @@ public class MyLinkedList<E> implements List<E> {
         }
     }
 
-    public Node getNode(int index) {
+    public Node<E> getNode(int index) {
         if(index < 0 || index >= size){
             throw new IndexOutOfBoundsException();
         }
-        Node node = head;
+        Node<E> node = head;
         for(int i = 0; i < index; i++){
             node = node.next;
         }
@@ -90,10 +88,10 @@ public class MyLinkedList<E> implements List<E> {
     public boolean add(E e) {
         int previousSize = size;
         if(size == 0){
-            head = new Node(e, head);
+            head = new Node<>(e, head);
         }
         else {
-            Node node = new Node(e);
+            Node<E> node = new Node<>(e);
             tail = node.next;
             getNode(size - 1).next = node;
         }
@@ -175,9 +173,9 @@ public class MyLinkedList<E> implements List<E> {
         if(index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        Node node;
+        Node<E> node;
         node = getNode(index - 1);
-        node. next = new Node(element, node.next);
+        node. next = new Node<>(element, node.next);
         size++;
     }
 
