@@ -4,7 +4,7 @@
 - [ ] indexOf
     * indexOf
     * LastIndexOf
-- [ ] get / set
+- [X] get / set
 - [X] size
 - [X] isEmpty
 - [X] add
@@ -18,8 +18,9 @@
 - [X] contains
     * contains(Object)
     * containsAll(Collection)
-- [ ] iterator
+- [X] iterator
 - [ ] retain
     * retain
     * retainAll
-##LinkedList
+
+## LinkedList
