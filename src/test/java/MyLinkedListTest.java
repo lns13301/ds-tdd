@@ -62,4 +62,5 @@ public class MyLinkedListTest {
         assertThat(myLinkedList.get(3)).isEqualTo("specialElement2");
         assertThat(myLinkedList.get(4)).isEqualTo("element2");
     }
+
 }

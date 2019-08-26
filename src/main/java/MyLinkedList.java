@@ -93,7 +93,8 @@ public class MyLinkedList<E> implements List<E> {
             head = new Node(e, head);
         }
         else {
-            Node node = new Node(e, tail);
+            Node node = new Node(e);
+            tail = node.next;
             getNode(size - 1).next = node;
         }
         size++;
