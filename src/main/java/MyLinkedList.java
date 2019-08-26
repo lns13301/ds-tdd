@@ -8,11 +8,17 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 public class MyLinkedList<E> implements List<E> {
-    private int size = 0;
+    private int size;
     private Node next;
     private Node tail;
     private Node head;
 
+    public MyLinkedList() {
+        this.size = 0;
+        this.next = null;
+        this.tail = null;
+        this. head = null;
+    }
     class Node{
         private E data;
         private Node next;
@@ -87,8 +93,7 @@ public class MyLinkedList<E> implements List<E> {
             head = new Node(e, head);
         }
         else {
-            Node node = new Node(e);
-            node.next = tail;
+            Node node = new Node(e, tail);
             getNode(size - 1).next = node;
         }
         size++;
