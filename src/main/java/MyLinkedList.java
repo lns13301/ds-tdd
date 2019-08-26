@@ -19,7 +19,7 @@ public class MyLinkedList<E> implements List<E> {
         this.tail = null;
         this. head = null;
     }
-    class Node{
+    class Node<E> {
         private E data;
         private Node next;
         public Node(E data){
@@ -161,12 +161,13 @@ public class MyLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        return getNode(index).data;
+        return (E)getNode(index).data;
     }
 
     @Override
     public E set(int index, E element) {
-        return null;
+        getNode(index).data = element;
+        return element;
     }
 
     @Override
