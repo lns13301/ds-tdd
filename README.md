@@ -28,28 +28,3 @@
 - [ ] retain
     * retain
     * retainAll
-    
-##LinkedList
-- [X] NodeClass
-- [X] getNode
-- [ ] indexOf
-    * indexOf
-    * LastIndexOf
-- [X] get / set
-- [X] size
-- [X] isEmpty
-- [X] add
-    * add(index)
-    * add(Object)
-    * addAll(Collection)
-- [ ] remove
-    * remove(index)
-    * remove(Object)
-    * remove(Collection)
-- [ ] contains
-    * contains(Object)
-    * containsAll(Collection)
-- [ ] iterator
-- [ ] retain
-    * retain
-    * retainAll
